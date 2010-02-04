@@ -14,16 +14,22 @@
         </div>
         
         <ul id='navigation'>
-          <li><%= link_to t(:home), root_path %></li>
           <% if admin? %>
+          	<% Page.all.each do |page| %>
+          		<li><%= link_to t(page.name), view_page_path(page.name) %></li>
+          	<% end %>
           	<li><%= link_to t(:logout)+" <span class=\"small\">(admin)</span>", admin_logout_path %></li>
           	<li><%= link_to t('users.title'), admin_users_path %></li>
           
           <% elsif session[:user_id].blank? %>
+          	<li><%= link_to t(:home), root_path %></li>
             <li><%= link_to t(:login), login_path %></li>
             <li><%= link_to t(:contact_us), root_path %></li>
 
           <% else %>
+          	<% Page.all.each do |page| %>
+          		<li><%= link_to t(page.name), view_page_path(page.name) %></li>
+          	<% end %>
             <li><%= link_to t(:logout)+" <span class=\"small\">(#{current_user.username})</span>", logout_path %></li>
             <li><%= link_to t(:mypage), current_user %></li>
           <% end %>

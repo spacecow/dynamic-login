@@ -8,9 +8,17 @@ ActionController::Routing::Routes.draw do |map|
   map.admin_login 'admin/login', :controller => 'admin', :action => 'login'
   map.admin_logout 'admin/logout', :controller => 'admin', :action => 'logout'
   
+  map.resources :users
   map.namespace :admin do |admin|
 		admin.resources :users
 	end
+	
+  map.resources :pages
+  map.namespace :admin do |admin|
+		admin.resources :pages
+	end
+	
+	map.view_page ':name', :controller=>'pages', :action=>'show'
 	  
   map.root :controller=>'welcome', :action=>'index'
 

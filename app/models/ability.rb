@@ -8,8 +8,11 @@ class Ability
 			can :create, User
 
 			user ||= User.new
-			can :show, User do |u|
-				u == user
+			if user.role? :registrant
+				can :show, Page
+				can :show, User do |u|
+					u == user
+				end
 			end
 		end
   end  

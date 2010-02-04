@@ -1,0 +1,21 @@
+<% title t('pages.title') %>
+<% subtitle t('pages.message.index') %>
+
+<table id="pages">
+	<thead>
+		<tr>
+			<th><%= t(:name) %></th>
+			<th><%= t(:title) %></th>
+			<th><%= t(:subtitle) %></th>
+			<th><%= t(:body) %></th>
+			<th><%= t(:actions) %></th>
+		</tr>
+	</thead>
+	<tbody>
+		<%= render @pages %>
+	</tbody>	
+</table>
+
+<div id="links">
+	<%= link_to t(:new, :object=>t(:page)), new_admin_page_path %>
+</div>

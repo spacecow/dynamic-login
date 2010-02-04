@@ -1,0 +1,7 @@
+<tr>
+	<td><%= h page.name %></td>
+	<td><%= h page.title %></td>
+	<td><%= h page.subtitle %></td>
+	<td><%= h page.body %></td>
+	<td><%= link_to t(:show), view_page_path( h page.name ) %> <%= link_to t(:edit), edit_admin_page_path(page) %> <%= link_to t(:delete), admin_page_path(page), :method => :delete, :confirm => "Are you sure?" %></td>
+</tr>

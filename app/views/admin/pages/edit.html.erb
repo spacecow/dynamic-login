@@ -1,0 +1,12 @@
+<% title t(:editing, :object=>t(:page)) %>
+<% subtitle t('pages.message.edit') %>
+
+<% semantic_form_for [:admin,@page] do |f| %>
+	<%= render :partial=>'form', :locals=>{ :f=>f, :button=>'update' } %>
+<% end %>
+
+<div id="links">
+	<%= link_to t(:show), @page %>
+	<%= link_to t(:delete), admin_page_path( @page ), :method=>:delete, :confirm=>t('message.sure?') %>
+	<%= link_to t(:list, :object=>t('pages.title')), admin_pages_path %>
+</div>

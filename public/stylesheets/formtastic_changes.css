@@ -9,4 +9,12 @@ form.formtastic fieldset.inputs ol li input {
   float: left;
   width: 20em;
 }
+form.formtastic fieldset.inputs ol li textarea {
+  float: left;
+  width: 20em;
+}
+form.formtastic fieldset.inputs ol li textarea {
+  height: 70px;
+  resize: none;
+}
 form.formtastic fieldset.buttons { padding-left: 13em; }

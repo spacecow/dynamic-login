@@ -9,6 +9,7 @@ class UsersController < ApplicationController
   
   def create
     if @user.save
+    	@user.update_attribute( :roles_mask, 1 )
       session[:user_id] = @user.id
       flash[:notice] = t('message.signup_thanks')
       redirect_to root_url
