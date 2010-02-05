@@ -1,7 +1,15 @@
 <% title h( @page.title ) %>
 <% subtitle h( @page.subtitle ) %>
 
-<%= @page.body %>
+<div id="links">
+	<%= link_to t(:edit), edit_admin_page_path( @page ) if can? :edit, @page %>
+	<%= link_to t(:delete), admin_page_path( @page ), :method=>:delete, :confirm=>t('message.sure?') if can? :destroy, @page %>
+	<%= link_to t(:list, :object=>t('pages.title')), admin_pages_path if can? :index, Page %>
+</div>
+
+<div id="main">
+	<%= @page.body %>
+</div>
 
 <div id="links">
 	<%= link_to t(:edit), edit_admin_page_path( @page ) if can? :edit, @page %>

@@ -2,6 +2,9 @@
 	<%= f.input :name, :label => t(:name) %>
 	<%= f.input :title, :label => t(:title) %>
 	<%= f.input :subtitle, :label => t(:subtitle) %>
+	<%= f.input :navlabel, :label => t(:navlabel) %>
+	<%= f.input :parent, :label => t(:parent_page) %>
+	<%= f.input :position, :label => t(:position), :input_html => { :size => 6 } %>
 	<%= f.input :body, :label => t(:body) %>
 <% end %>
 <% f.buttons do %>

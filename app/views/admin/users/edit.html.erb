@@ -8,13 +8,14 @@
 		<%= f.input :password, :label => t(:password) %>
 		<%= f.input :password_confirmation, :label => t(:password_confirmation) %>
 	<% end %>
+	<% f.hidden_field :id, :id => "2" %>
 	<% f.buttons do %>
 		<%= f.commit_button t(:update) %>
 	<% end %>	
 <% end %>
 
 <div id="links">
-	<%= link_to t(:show), @user %>
+	<%= link_to t(:show), user_path(@user.username) %>
 	<%= link_to t(:delete), admin_user_path( @user ), :method=>:delete, :confirm=>t('message.sure?') %>
 	<%= link_to t(:listing, :object=>t('users.title')), admin_users_path %>
 </div>

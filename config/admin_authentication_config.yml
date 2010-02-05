@@ -11,5 +11,5 @@ production:
   password: test
   
 cucumber:
-  username: johan
+  username: admin
   password: secret

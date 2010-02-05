@@ -24,7 +24,7 @@ class Admin::PagesController < AdminController
 		@page = Page.find( params[:id] )
 		if @page.update_attributes( params[:page] )
 			flash[:notice] = t('notice.updated', :object=>t(:page))
-			redirect_to admin_pages_path
+			redirect_to page_path( @page )
 		else
 			render :action => :edit
 		end  	

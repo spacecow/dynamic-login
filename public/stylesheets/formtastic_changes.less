@@ -12,18 +12,30 @@ form.formtastic{
 					text-align:right;
 					padding-right:@label_margin;
 				}
-				input, textarea{
+				input, textarea, select{
+					margin-right:20em;
 					float:left;
+				}
+				input, textarea{
 					width:20em;
 				}
 				textarea{
-					height:70px;
+					height:7em;
 					resize:none;
+				}
+				textarea#page_body{
+					margin-right:0;
+				  width:32em;
+				  height:40em;
+				}
+				input#page_position{
+					width:2em;
 				}
 			}
 		}
 	}
 	fieldset.buttons{
 		padding-left:@label_width+@label_margin;
+		margin-right:20em;
 	}
 }

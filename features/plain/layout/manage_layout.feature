@@ -1,6 +1,5 @@
-@admin
 Scenario: Admin logged in view
-Given I am logged in as admin "johan"
+Given I am logged in as admin
 When I go to the root page
 Then I should see options "Home, Log out (admin), Users" in the navigation bar
 

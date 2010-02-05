@@ -22,4 +22,17 @@ a:hover {
   color: #ffffff;
   padding: 0 1px 0 1px;
 }
+div#main { width: 35em; }
 div#links { margin-top: 1em; }
+ul#navigation li:hover ul { left: auto; }
+ul#navigation li ul {
+  position: absolute;
+  left: -999em;
+  margin-left: 0;
+}
+ul#navigation li ul li { background: #1f7fd0; }
+ul#navigation li ul li a {
+  line-height: 20px;
+  padding-top: 0;
+  padding-bottom: 0;
+}

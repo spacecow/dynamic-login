@@ -30,6 +30,14 @@ Then /^I should see "([^\"]*)" as subtitle$/ do |message|
   Then "I should see \"#{message}\" within \"h3\""
 end
 
+When /^I follow "([^\"]*)" within the users table$/ do |link|
+	When "I follow \"#{link}\" within \"table#users\""
+end
+
+When /^I follow "([^\"]*)" at the bottom of the page$/ do |link|
+	When "I follow \"#{link}\" within \"div#links\""
+end
+
 Then /^I should see links "([^\"]*)" at the bottom of the page$/ do |options|
 	Then "I should see options \"#{options}\" within \"div#links\""
 end

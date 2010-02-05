@@ -13,12 +13,22 @@
         <div id='logo'>
           <%# link_to image_tag('logo.png', :border => 0, :alt => SITE_CONFIG[:app_name]) %>
         </div>
-        
+      
         <ul id='navigation'>
-          <li><%= link_to t(:home), root_path %></li>
+          <li><%= link_to t(:home), root_path %>
+						<ul>
+							<li><%= link_to t(:position), admin_users_path %></li>
+							<li><%= link_to t(:edit), admin_users_path %></li>
+						</ul>
+          </li>
           <% if admin? %>
           	<% Page.all.each do |page| %>
-          		<li><%= link_to t(page.name), view_page_path(page.name) %></li>
+          		<li><%= link_to t(page.name), view_page_path(page.name) %>
+								<ul>
+									<li><%= link_to t(:position), admin_users_path %></li>
+									<li><%= link_to t(:edit), admin_users_path %></li>
+								</ul>
+							</li>
           	<% end %>
           	<li><%= link_to t(:logout)+" <span class=\"small\">(admin)</span>", admin_logout_path %></li>
           	<li><%= link_to t('users.title'), admin_users_path %></li>

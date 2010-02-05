@@ -6,15 +6,30 @@ form.formtastic fieldset.inputs ol li label {
   padding-right: 1em;
 }
 form.formtastic fieldset.inputs ol li input {
+  margin-right: 20em;
   float: left;
-  width: 20em;
 }
 form.formtastic fieldset.inputs ol li textarea {
+  margin-right: 20em;
   float: left;
-  width: 20em;
 }
+form.formtastic fieldset.inputs ol li select {
+  margin-right: 20em;
+  float: left;
+}
+form.formtastic fieldset.inputs ol li input { width: 20em; }
+form.formtastic fieldset.inputs ol li textarea { width: 20em; }
 form.formtastic fieldset.inputs ol li textarea {
-  height: 70px;
+  height: 7em;
   resize: none;
 }
-form.formtastic fieldset.buttons { padding-left: 13em; }
+form.formtastic fieldset.inputs ol li textarea#page_body {
+  margin-right: 0;
+  width: 32em;
+  height: 40em;
+}
+form.formtastic fieldset.inputs ol li input#page_position { width: 2em; }
+form.formtastic fieldset.buttons {
+  padding-left: 13em;
+  margin-right: 20em;
+}

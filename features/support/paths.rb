@@ -14,6 +14,9 @@ module NavigationHelpers
 		when /path "(.+)"/
 			$1
 	        
+		when /^the show page (?:for|of) user with username: "(.+)"$/
+			"/users/#{$1}"
+
 		when /^the (?:error )?(?:(admin) )?show page (?:for|of) (.+)$/
 			( $1 ? "/#{$1}" : "" ) + polymorphic_path( model($2) )
 			      
