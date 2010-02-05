@@ -1,4 +1,4 @@
 <% title h @page.title %>
 <% subtitle h @page.subtitle %>
 
-<%= @page.body %>
+<%= in_place_editor_field :page, 'body' %>
