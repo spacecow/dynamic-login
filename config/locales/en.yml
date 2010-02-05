@@ -10,6 +10,7 @@ en:
   email: "Email"
   email_address: "Email Address"
   home: "Home"
+  links: "Links"
   list: "List {{object}}"
   listing: "Listing {{object}}"
   login: "Log in"

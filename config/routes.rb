@@ -18,7 +18,6 @@ ActionController::Routing::Routes.draw do |map|
 		admin.resources :pages
 	end
 	
-	map.bajs ':name', :controller=>'admin/pages', :action=>'show'
 	map.view_page ':name', :controller=>'pages', :action=>'show'
 	  
   map.root :controller=>'welcome', :action=>'index'

@@ -13,6 +13,8 @@ class User < ActiveRecord::Base
   validates_confirmation_of :password
   validates_length_of :password, :minimum => 4, :allow_blank => true
 
+	before_create :set_role
+
 	ROLES = %w[registrant]
   
   # login can be either username or email address
@@ -48,5 +50,9 @@ private
 	 
 	def roles  
 	 ROLES.reject { |r| ((roles_mask || 0) & 2**ROLES.index(r)).zero? }  
-	end  
+	end
+	
+	def set_role
+		roles=["registrant"]
+	end
 end

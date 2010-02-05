@@ -19,3 +19,9 @@ Then /^I should see options "([^\"]*)" within "([^\"]*)"$/ do |options, selector
 		end
 	end
 end
+
+Then /^I should see no options within "([^\"]*)"$/ do |selector|
+	response.body.should have_selector( selector ) do |content|
+  	content.map(&:inner_html).join.strip.should be_blank
+	end
+end

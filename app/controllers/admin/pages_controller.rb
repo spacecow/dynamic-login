@@ -1,15 +1,5 @@
-class Admin::PagesController < ApplicationController
+class Admin::PagesController < AdminController
 	load_and_authorize_resource
-	in_place_edit_for :page, :body
-	
-	def show
-		@page = Page.find_by_name( params[:name] )
-	end
-	
-#	def set_page_body
-#    page = Page.find(params[:value])
-#    render :text => page.body
-#  end
 	
 	def index
 		@pages = Page.all
