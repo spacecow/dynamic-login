@@ -6,6 +6,7 @@ form.formtastic{
 		ol{
 			width:60em;
 			li{
+				width:100%;
 				label{
 					float:left;
 					width:@label_width;
@@ -13,7 +14,7 @@ form.formtastic{
 					padding-right:@label_margin;
 				}
 				input, textarea, select{
-					margin-right:20em;
+					margin-right:26em;
 					float:left;
 				}
 				input, textarea{
@@ -25,11 +26,22 @@ form.formtastic{
 				}
 				textarea#page_body{
 					margin-right:0;
-				  width:32em;
+				  width:31em;
 				  height:40em;
 				}
+				p.inline-hints{
+					margin:0 0 0 12em;
+					padding:0;
+				  font-style:italic;
+				}
+				p.inline-errors{
+					margin:0 0 0 13em;
+					padding:0;
+				  font-style:italic;
+				}				
 				input#page_position{
 					width:2em;
+					margin-right:44em;
 				}
 			}
 		}

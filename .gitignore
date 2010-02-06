@@ -4,6 +4,8 @@ backup/*
 Yoyaku_Log.csv
 *.bak
 config/database.yml
+config/admin_authentication_config.yml
+config/site_config.yml
 ruby/*.*
 config/smtp_gmail.ymllog/*.log
 tmp/**/*

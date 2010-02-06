@@ -38,10 +38,52 @@ When /^I follow "([^\"]*)" at the bottom of the page$/ do |link|
 	When "I follow \"#{link}\" within \"div#links\""
 end
 
-Then /^I should see links "([^\"]*)" at the bottom of the page$/ do |options|
-	Then "I should see options \"#{options}\" within \"div#links\""
+Then /^I should see links "([^\"]*)" at the (?:top and bottom|bottom and top) of the page$/ do |options|
+	Then "I should see links \"#{options}\" at the top of the page"
+	Then "I should see links \"#{options}\" at the bottom of the page"
 end
 
-Then /^I should see no links at the bottom of the page$/ do
-	Then "I should see no options within \"div#links\""
+Then /^I should see links "([^\"]*)" at the (bottom|top) of the page$/ do |options, position|
+	Then "I should see options \"#{options}\" within \"div##{position}_links\""
 end
+
+Then /^I should see no links at the (?:top nor bottom|bottom nor top) of the page$/ do
+	Then "I should see no links at the top of the page"
+	Then "I should see no links at the bottom of the page"
+end
+
+Then /^I should see no links at the (bottom|top) of the page$/ do |position|
+	Then "I should see no options within \"div##{position}_links\""
+end
+
+
+#-------------------- ERROR
+
+Then /^I should see "([^\"]*)" as (?:error message|hint) for (\w+) (\w+)$/ do |message, model, field|
+  Then "I should see \"#{message}\" within \"li##{model}_#{field}_input\""
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

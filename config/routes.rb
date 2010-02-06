@@ -20,7 +20,7 @@ ActionController::Routing::Routes.draw do |map|
 	
 	map.view_page ':name', :controller=>'pages', :action=>'show'
 	  
-  map.root :controller=>'welcome', :action=>'index'
+  map.root :controller=>'pages', :action=>'show', :name=>'home'
 
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'

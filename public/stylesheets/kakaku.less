@@ -15,31 +15,45 @@
 }
 a { .global_a; }
 
-div#main{
-	width:35em;
-}
-
-div#links{
-	margin-top:1em;
-}
-
-ul#navigation{
-	li{
-		:hover ul{
-			left: auto;
+div#root{
+	width:750px;
+	margin:0 auto 25px auto;
+	padding:0;
+	div#header{
+		div#logo{
+			line-height:121px;
 		}
-		ul{
-			position: absolute;
-			left: -999em;
-			margin-left:0;
-			li{
-				background:#1F7FD0;
-				a{
-					line-height:20px;
-					padding-top:0;
-					padding-bottom:0;
+	}
+	ul#navigation{
+		li{
+			:hover ul{
+				left: auto;
+			}
+			ul{
+				position: absolute;
+				left: -999em;
+				margin-left:0;
+				li{
+					background:#1F7FD0;
+					a{
+						line-height:20px;
+						padding-top:0;
+						padding-bottom:0;
+					}
 				}
 			}
 		}
 	}
 }
+
+div#main{
+	width:31em;
+}
+
+div#top_links{
+	margin-bottom:1em;
+}
+div#bottom_links{
+	margin-top:1em;
+}
+

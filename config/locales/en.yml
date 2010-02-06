@@ -1,6 +1,8 @@
 en:
   actions: "Actions"
   admin: "Admin"
+  admin_subtitle: "Fill in username and password to log in"
+  admin_title: "Admin log in"
   body: "Body"
   contact: "Contact us"
   create: "Create"
@@ -59,7 +61,13 @@ en:
       edit: ""
       new: ""
       index: "List of pages"
-    
+    hint:
+      name: "The name the page will have in the URL-field."
+      navlabel: "What the page will be named in the navigation bar."
+      position: "Pages will be listed in ascending order in the navigation bar from left to right according to this number."
+      subtitle: "The subtitle of the page."
+      title: "The title of the page."
+      
   users:
     title: "Users"
     message:

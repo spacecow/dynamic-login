@@ -1,4 +1,6 @@
 Factory.define :page do |f|
+	f.sequence(:name){|n| "name#{n}" }
+	f.sequence(:navlabel){|n| "navlabel#{n}" }
 end
 
 Factory.define :user do |f|
