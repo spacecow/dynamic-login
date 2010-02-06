@@ -1,4 +1,5 @@
 form.formtastic fieldset.inputs ol { width: 60em; }
+form.formtastic fieldset.inputs ol li { width: 100%; }
 form.formtastic fieldset.inputs ol li label {
   float: left;
   width: 12em;
@@ -6,15 +7,15 @@ form.formtastic fieldset.inputs ol li label {
   padding-right: 1em;
 }
 form.formtastic fieldset.inputs ol li input {
-  margin-right: 20em;
+  margin-right: 26em;
   float: left;
 }
 form.formtastic fieldset.inputs ol li textarea {
-  margin-right: 20em;
+  margin-right: 26em;
   float: left;
 }
 form.formtastic fieldset.inputs ol li select {
-  margin-right: 20em;
+  margin-right: 26em;
   float: left;
 }
 form.formtastic fieldset.inputs ol li input { width: 20em; }
@@ -25,10 +26,23 @@ form.formtastic fieldset.inputs ol li textarea {
 }
 form.formtastic fieldset.inputs ol li textarea#page_body {
   margin-right: 0;
-  width: 32em;
+  width: 31em;
   height: 40em;
 }
-form.formtastic fieldset.inputs ol li input#page_position { width: 2em; }
+form.formtastic fieldset.inputs ol li p.inline-hints {
+  margin: 0 0 0 12em;
+  padding: 0;
+  font-style: italic;
+}
+form.formtastic fieldset.inputs ol li p.inline-errors {
+  margin: 0 0 0 13em;
+  padding: 0;
+  font-style: italic;
+}
+form.formtastic fieldset.inputs ol li input#page_position {
+  width: 2em;
+  margin-right: 44em;
+}
 form.formtastic fieldset.buttons {
   padding-left: 13em;
   margin-right: 20em;

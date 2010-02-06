@@ -6,10 +6,10 @@ class Ability
 			can :manage, :all
 		elsif
 			can :create, User
-
+			can :show, Page
+			
 			user ||= User.new
 			if user.role? :registrant
-				can :show, Page
 				can :show, User do |u|
 					u == user
 				end

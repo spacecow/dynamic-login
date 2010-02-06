@@ -1,6 +1,7 @@
 Scenario: Log in as admin
 When I go to the admin login page
 Then I should see "Admin log in" as title
+	And I should see "Fill in username and password to log in"
 When I fill in "Username" with "admin"
 	And I fill in "Password" with "secret"
 	And I press "Log in"

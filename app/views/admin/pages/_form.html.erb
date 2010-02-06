@@ -1,11 +1,11 @@
 <% f.inputs do %>
-	<%= f.input :name, :label => t(:name) %>
-	<%= f.input :title, :label => t(:title) %>
-	<%= f.input :subtitle, :label => t(:subtitle) %>
-	<%= f.input :navlabel, :label => t(:navlabel) %>
-	<%= f.input :parent, :label => t(:parent_page) %>
-	<%= f.input :position, :label => t(:position), :input_html => { :size => 6 } %>
-	<%= f.input :body, :label => t(:body) %>
+	<%= f.input :name, :label => t(:name), :hint=>t('pages.hint.name') %>
+	<%= f.input :title, :label => t(:title), :required=>false, :hint=>t('pages.hint.title') %>
+	<%= f.input :subtitle, :label => t(:subtitle), :required=>false, :hint=>t('pages.hint.subtitle') %>
+	<%= f.input :navlabel, :label => t(:navlabel), :hint=>t('pages.hint.navlabel') %>
+	<%# f.input :parent, :label => t(:parent_page) %>
+	<%= f.input :position, :label => t(:position), :input_html => { :size => 6 }, :hint=>t('pages.hint.position') %>
+	<%= f.input :body, :label => t(:body), :required=>false %>
 <% end %>
 <% f.buttons do %>
 	<%= f.commit_button t( button ) %>

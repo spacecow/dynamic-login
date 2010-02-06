@@ -1,10 +1,14 @@
 <% title t(:new, :object=>t(:page)) %>
 <% subtitle t('pages.message.new') %>
 
+<div id="top_links">
+	<%= link_to t(:list, :object=>t('pages.title')), admin_pages_path %>
+</div>
+
 <% semantic_form_for [:admin,@page] do |f| %>
 	<%= render :partial=>'form', :locals=>{ :f=>f, :button=>'create' } %>
 <% end %>
 
-<div id="links">
-	<%= link_to t(:listing, :object=>t('pages.title')), admin_pages_path %>
+<div id="bottom_links">
+	<%= link_to t(:list, :object=>t('pages.title')), admin_pages_path %>
 </div>

@@ -11,36 +11,23 @@
       <div id='header'>
 
         <div id='logo'>
-          <%# link_to image_tag('logo.png', :border => 0, :alt => SITE_CONFIG[:app_name]) %>
+          <%= link_to image_tag('amonrevision.jpg', :width=>"300", :border => 0, :alt => SITE_CONFIG[:app_name]) %>
         </div>
       
         <ul id='navigation'>
-          <li><%= link_to t(:home), root_path %>
-						<ul>
-							<li><%= link_to t(:position), admin_users_path %></li>
-							<li><%= link_to t(:edit), admin_users_path %></li>
-						</ul>
-          </li>
+          <li><%= link_to t(:home), root_path %></li>
+        	<% Page.all( :order=>:position ).reject{|e| e.name=='home'}.each do |page| %>
+        		<li><%= link_to page.navlabel, view_page_path(page.name) %></li>
+        	<% end %>
           <% if admin? %>
-          	<% Page.all.each do |page| %>
-          		<li><%= link_to t(page.name), view_page_path(page.name) %>
-								<ul>
-									<li><%= link_to t(:position), admin_users_path %></li>
-									<li><%= link_to t(:edit), admin_users_path %></li>
-								</ul>
-							</li>
-          	<% end %>
           	<li><%= link_to t(:logout)+" <span class=\"small\">(admin)</span>", admin_logout_path %></li>
           	<li><%= link_to t('users.title'), admin_users_path %></li>
+          	<li><%= link_to t('pages.title'), admin_pages_path %></li>
           
           <% elsif session[:user_id].blank? %>
             <li><%= link_to t(:login), login_path %></li>
-            <li><%= link_to t(:contact), root_path %></li>
 
           <% else %>
-          	<% Page.all.each do |page| %>
-          		<li><%= link_to t(page.name), view_page_path(page.name) %></li>
-          	<% end %>
             <li><%= link_to t(:logout)+" <span class=\"small\">(#{current_user.username})</span>", logout_path %></li>
             <li><%= link_to t(:mypage), current_user %></li>
           <% end %>
