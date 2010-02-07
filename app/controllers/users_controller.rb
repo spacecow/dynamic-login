@@ -3,7 +3,6 @@ class UsersController < ApplicationController
   load_and_authorize_resource
 
   def show
-  	@user = params[:id].to_i == 0 ? User.find_by_username( params[:id] ) : User.find( params[:id])
   end
   
   def new

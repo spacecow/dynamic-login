@@ -1,5 +1,6 @@
-@main_bg: 					#fff;
-@link_fg:						#1F7FD0;
+@main_bg: 	 #fff;
+@link_fg:		 #1F7FD0;
+@light_pink: #F6A2C6;
 
 .global_a{
 	text-decoration: none;	
@@ -15,31 +16,55 @@
 }
 a { .global_a; }
 
+body{ text-align: center }
+
 div#root{
+	text-align:left;
 	width:750px;
 	margin:0 auto 25px auto;
 	padding:0;
 	div#header{
 		div#logo{
-			line-height:121px;
+			a{ 
+				float:left;
+				margin-top:30px;
+			}
+			a:hover{
+				background:#fff;
+			}
+		}
+		ul#navigation{
+			li{
+				:hover ul{
+					left: auto;
+				}
+				a:hover{ background:@light_pink; }
+				ul{
+					position: absolute;
+					left: -999em;
+					margin-left:0;
+					li{
+						background:#1F7FD0;
+						a{
+							line-height:20px;
+							padding-top:0;
+							padding-bottom:0;
+						}
+					}
+				}
+			}
+			li.current{
+				a{
+					color:#000;
+				}
+			}
 		}
 	}
-	ul#navigation{
-		li{
-			:hover ul{
-				left: auto;
-			}
-			ul{
-				position: absolute;
-				left: -999em;
-				margin-left:0;
-				li{
-					background:#1F7FD0;
-					a{
-						line-height:20px;
-						padding-top:0;
-						padding-bottom:0;
-					}
+	div#contents{
+		table{
+			thead{
+				tr{ 
+					th{ background:@light_pink; }
 				}
 			}
 		}

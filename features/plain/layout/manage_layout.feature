@@ -17,4 +17,7 @@ Scenario: Logged out view
 Given a page exists with navlabel: "Services", position: 1
 	And a page exists with navlabel: "Links", position: 1
 When I go to the root page
-Then I should see options "Home, Services, Links, Log in, Contact us" in the navigation bar
+Then I should see options "Home, Services, Links, Log in" in the navigation bar
+
+Scenario: Sidan hoppar i sidled när sida ändras (NOT IMPLEMENTED)
+Given not implemented

@@ -35,7 +35,7 @@ When /^I follow "([^\"]*)" within the users table$/ do |link|
 end
 
 When /^I follow "([^\"]*)" at the bottom of the page$/ do |link|
-	When "I follow \"#{link}\" within \"div#links\""
+	When "I follow \"#{link}\" within \"div#bottom_links\""
 end
 
 Then /^I should see links "([^\"]*)" at the (?:top and bottom|bottom and top) of the page$/ do |options|
